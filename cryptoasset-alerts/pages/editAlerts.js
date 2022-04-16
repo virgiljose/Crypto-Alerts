@@ -42,7 +42,7 @@ export default function EditAlerts() {
                 </Card.Body>
             </Card>
         ) : data.result.map((entry) => (
-                <Card style={{ width: '36rem', margin: '1rem' }}>
+                <Card key={entry._id} style={{ width: '36rem', margin: '1rem' }}>
                     <Card.Body>
                         <Card.Title>{entry.ticker}</Card.Title>
                         <Card.Text>
@@ -146,7 +146,7 @@ export default function EditAlerts() {
                         <Form.Label>Ticker</Form.Label>
                         <Form.Control type="text" name="ticker" placeholder="BTC" />
                         <Form.Text className="text-muted">
-                            Enter the ticker (ex. 'BTC'), not the name of the cryptoasset (ex. 'Bitcoin').
+                            Enter the ticker (ex. &lsquo;BTC&rsquo;), not the name of the cryptoasset (ex. &lsquo;Bitcoin&rsquo;).
                         </Form.Text>
                     </Form.Group>
                     <Form.Group>
@@ -164,7 +164,7 @@ export default function EditAlerts() {
                         </Form.Select>
                         <Form.Text className="text-muted">
                             Select whether you want alerts to be triggered above or below price target. <br/>
-                            (ex. if price target is set to 56,000 and price direction is set to 'below', then alerts will be triggered when price dips below 56,000)
+                            (ex. if price target is set to 56,000 and price direction is set to &lsquo;below&rsquo;, then alerts will be triggered when price dips below 56,000)
                         </Form.Text>
                     </Form.Group>
 

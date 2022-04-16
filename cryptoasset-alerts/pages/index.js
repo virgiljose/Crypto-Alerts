@@ -37,7 +37,7 @@ export default function Home() {
                 </Card.Body>
             </Card>
         ) : data.result.map((entry) => (
-                <Card style={{ width: '36rem', margin: '1rem' }}>
+                <Card key={entry._id} style={{ width: '36rem', margin: '1rem' }}>
                     <Card.Body>
                         <Card.Title>{entry.ticker} {entry.direction ? "Above" : "Below"} ${entry.alertPrice}</Card.Title>
                         <Card.Text>
